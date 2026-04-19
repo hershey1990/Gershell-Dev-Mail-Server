@@ -1,4 +1,4 @@
-# Poste.io Deployment for gershell.dev
+# Poste.io Deployment for mail.gershell.dev
 
 This project provides a simple, containerized mail server setup using [Poste.io](https://poste.io/) on AWS Lightsail.
 
@@ -29,13 +29,13 @@ This project provides a simple, containerized mail server setup using [Poste.io]
    ```
 
 4. **Initialize:**
-   Go to `https://gershell.dev` in your browser to set up the admin password.
+   Go to `https://mail.gershell.dev` in your browser to set up the admin password.
 
 ## DNS Configuration (Required)
 
 To ensure email deliverability, configure these records in your DNS provider:
 
-- **MX Record:** `@ IN MX 10 gershell.dev.`
-- **A Record:** `gershell.dev IN A <Your-VPS-IP>`
+- **MX Record:** `@ IN MX 10 mail.gershell.dev.`
+- **A Record:** `mail.gershell.dev IN A <Your-VPS-IP>`
 - **SPF (TXT):** `v=spf1 mx ~all`
 - **DKIM/DMARC:** Generate these inside the Poste.io admin panel after setup.
